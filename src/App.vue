@@ -1,32 +1,21 @@
 <template>
-  <div class="flex flex-col h-screen justify-between bg-slate-50">
+  <div class="flex flex-col">
     <navigation />
     <router-view />
     <FooterBar />
   </div>
 </template>
 
-<script>
+<script setup>
+import {useStore} from 'vuex'
+import {computed, provide} from 'vue'
+
 import navigation from "./components/NavigationBar.vue"
 import FooterBar from "./components/FooterBar.vue"
+import router from "./router/index"
 
-  export default {
-    name: "app",
-    components: 
-      {
-        navigation,
-        FooterBar,
-        },
-    data() {
-      return {
-        title: "YummyKitchen",
-      };
-    },
-    created() {},
-    mounted() {},
-    methods: {},
-    watch: {},
-  };
+provide('useStore', useStore)
+
 </script>
 
 <style>
