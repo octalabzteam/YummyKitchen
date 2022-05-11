@@ -28,6 +28,10 @@
               />
             </div>
 
+            <!-- Error Message -->
+            <div v-show="error" class="text-sm text-center p-3 -translate-y-5 text-red-500 transition-all">{{ errorMsg }}</div>
+
+
             <div class="flex justify-between items-center mb-6">
               <div class="form-group form-check">
                 <input
@@ -42,7 +46,7 @@
               </div>
               <router-link
                 :to="{name: 'ForgotPassword'}"
-                class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
+                class="text-blue-600 underline hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                 >Forgot password?</router-link
               >
             </div>
@@ -50,7 +54,7 @@
             <!-- Submit button -->
             <div class="flex w-full pt-5 space-x-2">
               <button
-                type="submit"
+                @click.prevent="signin"
                 class="inline-block h-fit px-7 py-3 bg-black text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-gray-800 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out w-1/2"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
@@ -130,9 +134,38 @@
 <script setup>
 import emailIco from '../assets/Icons/envelope-regular.svg'
 import passwordIco from '../assets/Icons/lock-alt-solid.svg'
+import firebase from 'firebase/app'
+import 'firebase/auth' 
 
-let email = null;
-let password = null;
+import {ref} from 'vue'
+import router from '../router'
+
+const email = ref("");
+const password = ref("");
+
+let error = ref(null);
+let errorMsg = ref("");
+
+function signin () {
+  if(email.value && password.value) {
+    firebase
+    .auth()
+    .signInWithEmailAndPassword(email.value, password.value)
+    .then(()=>{
+      router.push({name:'Home'});
+      error.value = false;
+      errorMsg.value = "";
+      console.log(firebase.auth().currentUser.uid);
+    }).catch(err => {
+      error.value = true;
+      errorMsg.value = err.message;
+    })
+    return
+  }
+  error.value = true;
+  errorMsg.value = "Please fill all the fields"
+  return
+}
 
 
 </script>

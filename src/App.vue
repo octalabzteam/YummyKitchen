@@ -8,13 +8,27 @@
 
 <script setup>
 import {useStore} from 'vuex'
-import {computed, provide} from 'vue'
+import {computed, provide, onMounted} from 'vue'
 
 import navigation from "./components/NavigationBar.vue"
 import FooterBar from "./components/FooterBar.vue"
 import router from "./router/index"
 
+import firebase from 'firebase/app'
+import "firebase/auth";
+
 provide('useStore', useStore)
+const store = useStore();
+
+onMounted(() => {
+  firebase.auth().onAuthStateChanged((user) => {
+    store.commit("UPDATE_USER", user);
+    if (user) {
+      store.dispatch("getCurrentUser")
+      console.log(store.state.user.profileEmail);
+    }
+  })
+})
 
 </script>
 

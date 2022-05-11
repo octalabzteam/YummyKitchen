@@ -1,6 +1,10 @@
 import { Store } from "vuex"
 import {reactive} from 'vue'
 
+import firebase from 'firebase/app'
+import "firebase/auth";
+import db from '../../firebase/firebaseInit';
+
 export default {
     state: () => reactive({
         AllItems: [
@@ -49,6 +53,11 @@ export default {
           ],
         name: "YummyKitchen",
         editPost: null,
+        user: null,
+        profileEmail: null,
+        profileName: null,
+        profileId: null,
+        profileIniitials: null,
     }),
     getters: {},
     mutations: {
@@ -59,6 +68,17 @@ export default {
             state.editPost = payload
             console.log(state.editPost);
         },
+        UPDATE_USER(state, payload){
+            state.user = payload
+        },
+        SET_PROFILE_INFO(state, doc) {
+            state.profileId = doc.id;
+            state.profileEmail = doc.data().Email;
+            state.profileName = doc.data().Name;
+        },
+        SET_PROFILEINITIALS(state) {
+            state.profileIniitials = state.profileName.match(/(\b\S)?/g);
+        },
     },
     actions: {
         saveName({commit}, data){
@@ -66,6 +86,13 @@ export default {
         },
         saveEdit({commit}, data){
             commit('SET_EDIT', data)
+        },
+        async getCurrentUser({commit}) {
+            const dataBase = await db.collection('users').doc(firebase.auth().currentUser.uid);
+            const dbResults = await dataBase.get();
+            commit('SET_PROFILE_INFO', dbResults);
+            commit('SET_PROFILEINITIALS');
+            console.log(dbResults);
         },
     },
 }
