@@ -1,12 +1,11 @@
 import { Store } from "vuex"
-import {reactive} from 'vue'
 
 import firebase from 'firebase/app'
 import "firebase/auth";
 import db from '../../firebase/firebaseInit';
 
 export default {
-    state: () => reactive({
+    state: () => ({
         AllItems: [
             { 
             itemTitle: "Item 1", 
@@ -17,30 +16,37 @@ export default {
             },
             { 
             itemTitle: "Item 2", 
-            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/Samosa-600x338.jpg", 
+            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/PaneerTikka-600x338.jpg", 
             itemDesc: "2 frittierte gefüllt mit Kartoffeln, Erbsen, Karotten, Zwiebeln.", 
             availabe: true, 
             category: "1" 
             },
             { 
             itemTitle: "Item 3", 
-            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/Samosa-600x338.jpg", 
+            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/05/TandooriChicken-600x338.jpg", 
             itemDesc: "2 frittierte gefüllt mit Kartoffeln, Erbsen, Karotten, Zwiebeln.", 
             availabe: true, 
             category: "1" 
             },
             { 
             itemTitle: "Item 4", 
-            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/Samosa-600x338.jpg", 
+            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/05/JhinkaTikka-600x338.jpg", 
             itemDesc: "2 frittierte gefüllt mit Kartoffeln, Erbsen, Karotten, Zwiebeln.", 
             availabe: true, 
             category: "1" 
             },
             { 
             itemTitle: "Item 5", 
-            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/Samosa-600x338.jpg", 
+            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/ChefSpecialSalad-1-600x338.jpg", 
             itemDesc: "2 frittierte gefüllt mit Kartoffeln, Erbsen, Karotten, Zwiebeln.", 
             availabe: true, 
+            category: "1" 
+            },
+            { 
+            itemTitle: "Item 6", 
+            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/05/ChickenTikkaMasala-600x338.jpg", 
+            itemDesc: "2 frittierte gefüllt mit Kartoffeln, Erbsen, Karotten, Zwiebeln.", 
+            availabe: false, 
             category: "1" 
             },
             { 
@@ -50,7 +56,19 @@ export default {
             availabe: false, 
             category: "1" 
             },
+            { 
+            itemTitle: "Item 6", 
+            itemPhoto: "https://yummy-kitchen.de/wp-content/uploads/2021/04/Mushroom65-600x338.jpg", 
+            itemDesc: "2 frittierte gefüllt mit Kartoffeln, Erbsen, Karotten, Zwiebeln.", 
+            availabe: false, 
+            category: "1" 
+            },
           ],
+        blogHtml: "Write your blog title here ...",
+        blogTitle: "",
+        blogPhotoName: "",
+        blogPhotoFileUrl: null,
+        blogPhotoPreview: null,
         name: "YummyKitchen",
         editPost: null,
         user: null,
@@ -58,6 +76,7 @@ export default {
         profileName: null,
         profileId: null,
         profileIniitials: null,
+        isAdmin: null,
     }),
     getters: {},
     mutations: {
@@ -75,10 +94,16 @@ export default {
             state.profileId = doc.id;
             state.profileEmail = doc.data().Email;
             state.profileName = doc.data().Name;
+            state.isAdmin = doc.data().isAdmin;
         },
         SET_PROFILEINITIALS(state) {
-            state.profileIniitials = state.profileName.match(/(\b\S)?/g);
+            state.profileIniitials = state.profileName.charAt(0);
         },
+        CHANGE_NAME(state, payload) {
+            state.profileName = payload;
+            console.log(state.profileName);
+
+        }
     },
     actions: {
         saveName({commit}, data){
@@ -92,7 +117,14 @@ export default {
             const dbResults = await dataBase.get();
             commit('SET_PROFILE_INFO', dbResults);
             commit('SET_PROFILEINITIALS');
-            console.log(dbResults);
+            console.log(dbResults.data());
+        },
+        async updateUserSettings({commit, state}){
+            const dataBase = await db.collection('users').doc(state.profileId);
+            await dataBase.update({
+                Name: state.profileName,
+            });
+            commit('SET_PROFILEINITIALS');
         },
     },
 }
