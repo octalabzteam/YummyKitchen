@@ -48,21 +48,23 @@
 
   <!-- Main Dish Section -->
 
-  <div class="flex h-screen relative space-y-8 flex-col md:flex-row justify-center text-center items-center pb-10">
+  <div class="flex h-fit md:h-screen mt-5 relative space-y-8 flex-col md:flex-row justify-center text-center pb-10">
     <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/icons/pngwing.com.png" alt=""> -->
     <div class="flex z-10 justify-center items-center md:justify-end px-14 w-full h-full md-1/2 pattren">
       <img v-bind:src="WelcomeInfo[1].photo" alt="" class="h-fit lg:w-2/3 w-4/5 rounded-sm img-shad">
     </div>
-    <div class="flex z-10 flex-col lg:text-left space-y-5 px-14 w-full ">
+    <div class="flex z-10 flex-col lg:text-left space-y-12 px-14 w-11/12 relative md:pt-36 tracking-wider">
       <div class="text-3xl" style="color:#B59F4A">{{WelcomeInfo[1].title}}</div>
-      <div class="leading-loose">{{WelcomeInfo[1].description}}</div>
+      <div class="leading-loose">{{WelcomeInfo[1].description}} Has a greate Feature</div>
+      <div class="leading-loose xl:w-2/3">{{WelcomeInfo[1].description}}</div>
     </div>
+    <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/icons/hotel-corner.png" alt="">
   </div>
 
   <!--Carousel Home Page -->
 
   <div class="flex relative flex-col md:flex-row space-y-14 md:space-x-20 items-center justify-center md:space-y-0 py-40 px-10 md:px-2">
-      <img class="absolute left-0 top-0" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/home5.png" alt="">
+      <img class="absolute w-96 xl:w-auto z-0 left-0 top-0" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/home5.png" alt="">
       <div class="space-y-3 text-center z-10">
         <div class="text-3xl md:text-xl lg:text-3xl" style="color:#B59F4A">Best Of Yummy Kitchen</div>
         <h3 class="max-w-sm leading-loose">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
@@ -88,7 +90,7 @@
 
   <!--Opening Hours Section -->
   <div class="flex relative flex-col items-center pt-28 text-center space-y-8 h-screen w-full pb-20 lg:pb-0">
-    <img class="absolute bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/icons/out-resturant.png" alt="">
+    <img class="absolute bottom-20 lg:bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/icons/out-resturant.png" alt="">
     <div class="text-3xl font-semibold" style="color: #B59F4A">Restaurant Hours</div>
     <div class="space-y-3 text-xl">
       <h1><span class="font-semibold">Monday   </span>5:30 pm – 12 pm</h1>
@@ -126,7 +128,7 @@
    box-shadow: -50px 50px 2px #a52a2a11;
 }
 .pattren {
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='54' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 #dish2 {
   border-radius: 0px 0px 100% 0px;

@@ -1,7 +1,54 @@
 <template>
-    <footer class="text-center flex flex-col bg-gray-600 text-white">
+    <footer class="flex flex-col text-white" style="background: #000;">
+      <div class="flex justify-around items-center flex-col md:flex-row pb-5">
+        <!-- Left Form -->
+        <div class="m-8">
+          <form action="">
+            <div class="flex flex-col">
+              <div class="md:ml-auto md:mb-6">
+                <div class="text-2xl md:text-3xl">DO YOU WANT TO STAY IN TOUCH?</div>
+                <p class="font-extralight text-xs md:text-sm py-3">
+                  Sign up to be the first to receive special news and event updates from YummyKitchen
+                </p>
+              </div>
+              <div class="flex w-full">
+                <div class="w-full">
+                  <input
+                    type="text"
+                    class="
+                      form-control
+                      block
+                      w-full
+                      px-3
+                      py-1.5
+                      text-base
+                      font-normal
+                      text-gray-700
+                      bg-white bg-clip-padding
+                      border border-solid border-gray-300
+                      rounded
+                      transition
+                      ease-in-out
+                      m-0
+                      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                    "
+                    id="exampleFormControlInput1"
+                    placeholder="Email address"/>
+                </div>
+
+                <div class="">
+                  <button type="submit" class="h-full inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+          </form>
+        </div>
+        <!-- Right Icons -->
         <div class="px-6 pt-6">
-            <div class="flex justify-center mb-6">
+          <div class="flex justify-center mb-6">
             <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                 <svg aria-hidden="true"
                 focusable="false"
@@ -104,52 +151,23 @@
                 </svg>
             </a> -->
             </div>
-        </div>
-        <div>
-      <form action="">
-        <div class="grid md:grid-cols-3 gird-cols-1 gap-4 justify-center items-center">
-          <div class="md:ml-auto md:mb-6">
-            <p class="">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-
-          <div class="md:mb-6">
-            <input
-              type="text"
-              class="
-                form-control
-                block
-                w-full
-                px-3
-                py-1.5
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding
-                border border-solid border-gray-300
-                rounded
-                transition
-                ease-in-out
-                m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-              "
-              id="exampleFormControlInput1"
-              placeholder="Email address"/>
-          </div>
-
-          <div class="md:mr-auto mb-6">
-            <button type="submit" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
-              Subscribe
-            </button>
+          <div class="text-xs text-center">
+          <p>Address Comes Here, 12000</p>
+          <p>Ph: +12-001210121</p>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+        
 
-        <div class="text-center p-4" style="background-color: #B59F4A;">
+        <div class="text-center flex justify-around p-2 text-sm" style="background-color: #B59F4A;">
+            <div>
             © 2021 Copyright:
-            <a class="text-whitehite" href="https://octalabz.com/">Octalabz</a>
+            <a class="text-whitehite underline" href="https://octalabz.com/">YummyKitchen</a>
+            </div>
+
+            <div class="text-xs">
+              <a href="#" class="underline">PRIVACY POLICY</a> | SHOW COOKIE BANNER | HANDCRAFTED BY <a href="#" class="underline">OCTALABZ IT SOLUTION</a>| GE
+            </div>
         </div>
     </footer>
 </template>

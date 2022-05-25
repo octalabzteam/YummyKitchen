@@ -5,12 +5,15 @@ import DishView from '../views/DishView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
+import ProfileView from '../views/ProfileView.vue'
+import AdminView from '../views/AdminView.vue'
+import CreatePost from '../views/CreatePost.vue'
 
 
 const routes = [
     {
-        path: '/',
-        name: 'Home',
+        path: '/:catchAll(.*)*',
+        name: "Home",
         component: HomeComponent,
         meta: {
             title: 'Home'
@@ -49,10 +52,35 @@ const routes = [
         } 
     },
     {
+        path: '/profile',
+        name: 'ProfileView',
+        component: ProfileView,
+        meta: {
+            title: 'Profile'
+        } 
+    },
+    {
+        path: '/admin',
+        name: 'AdminView',
+        component: AdminView,
+        meta: {
+            title: 'Admin'
+        } 
+    },
+    {
+        path: '/create-post',
+        name: 'CreatePost',
+        component: CreatePost,
+        meta: {
+            title: 'Admin'
+        } 
+    },
+    {
         path: '/h',
         name: 'HelloWorld',
         component: HelloWorld
-    }
+    },
+
 ];
 
 const router = createRouter({

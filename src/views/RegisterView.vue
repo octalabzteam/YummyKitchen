@@ -155,6 +155,7 @@ async function register() {
     await dataBase.set({
       Name: user.value,
       Email: email.value,
+      isAdmin: false,
     });
     router.push({name:'Home'});
     return;
