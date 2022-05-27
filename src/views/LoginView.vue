@@ -121,7 +121,7 @@
         </div>
         <div class="md:w-8/12 lg:w-6/12 w-0  mb-12 md:mb-0">
           <img
-            src="../assets/Icons/out-resturant.png"
+            src="../assets/out-resturant.png"
             class="w-full"
             alt="Phone image"
           />
@@ -132,8 +132,8 @@
 </template>
 
 <script setup>
-import emailIco from '../assets/Icons/envelope-regular.svg'
-import passwordIco from '../assets/Icons/lock-alt-solid.svg'
+import emailIco from '../assets/envelope-regular.svg'
+import passwordIco from '../assets/lock-alt-solid.svg'
 import firebase from 'firebase/app'
 import 'firebase/auth' 
 

@@ -44,7 +44,7 @@
         </div>
         <div class="md:w-8/12 lg:w-6/12 w-0  mb-12 md:mb-0">
           <img
-            src="../assets/Icons/out-resturant.png"
+            src="../assets/out-resturant.png"
             class="w-full"
             alt="Phone image"
             @click="closeModal"
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import emailIco from '../assets/Icons/envelope-regular.svg'
+import emailIco from '../assets/envelope-regular.svg'
 import ModalComponent from '../components/ModalComponent.vue'
 import SpinnerComponent from '../components/SpinnerComponent.vue'
 

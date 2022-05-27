@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import spinner from '../assets/Icons/Spinner.svg'
+import spinner from '../assets/Spinner.svg'
 
 </script>
 

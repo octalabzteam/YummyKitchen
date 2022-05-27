@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import adminIcon from '../assets/Icons/user-crown-light.svg'
+import adminIcon from '../assets/user-crown-light.svg'
 import ModalComponent from '../components/ModalComponent.vue'
 import {computed, ref} from 'vue'
 import {useStore} from 'vuex'

@@ -49,7 +49,7 @@
   <!-- Main Dish Section -->
 
   <div class="flex h-fit md:h-screen mt-5 relative space-y-8 flex-col md:flex-row justify-center text-center pb-10">
-    <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/icons/pngwing.com.png" alt=""> -->
+    <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/pngwing.com.png" alt=""> -->
     <div class="flex z-10 justify-center items-center md:justify-end px-14 w-full h-full md-1/2 pattren">
       <img v-bind:src="WelcomeInfo[1].photo" alt="" class="h-fit lg:w-2/3 w-4/5 rounded-sm img-shad">
     </div>
@@ -58,7 +58,7 @@
       <div class="leading-loose">{{WelcomeInfo[1].description}} Has a greate Feature</div>
       <div class="leading-loose xl:w-2/3">{{WelcomeInfo[1].description}}</div>
     </div>
-    <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/icons/hotel-corner.png" alt="">
+    <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/hotel-corner.png" alt="">
   </div>
 
   <!--Carousel Home Page -->
@@ -90,7 +90,7 @@
 
   <!--Opening Hours Section -->
   <div class="flex relative flex-col items-center pt-28 text-center space-y-8 h-screen w-full pb-20 lg:pb-0">
-    <img class="absolute bottom-20 lg:bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/icons/out-resturant.png" alt="">
+    <img class="absolute bottom-20 lg:bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/out-resturant.png" alt="">
     <div class="text-3xl font-semibold" style="color: #B59F4A">Restaurant Hours</div>
     <div class="space-y-3 text-xl">
       <h1><span class="font-semibold">Monday   </span>5:30 pm – 12 pm</h1>
@@ -103,18 +103,18 @@
     </div>
     <div class="flex pt-12 z-10 space-x-10 ">
       <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-        <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0"><img src="../assets/Icons/line-table-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
+        <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0"><img src="../assets/line-table-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
       </a>
 
       <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-      <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 "><img src="../assets/Icons/direction-svgrepo-com.svg" alt="" class="h-7 px-2 transition-all"></span></div>
+      <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 "><img src="../assets/direction-svgrepo-com.svg" alt="" class="h-7 px-2 transition-all"></span></div>
       </a>
     </div>
   </div>
 </template>
 
 <script setup>
-  import reservationIcon from '../assets/Icons/line-table-svgrepo-com.svg'
+  import reservationIcon from '../assets/line-table-svgrepo-com.svg'
   const props = defineProps({WelcomeInfo: Array});
   let idcount = 1;
 </script>

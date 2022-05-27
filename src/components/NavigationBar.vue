@@ -81,11 +81,11 @@
 </template>
 
 <script>
-import menuIcon from '../assets/Icons/bars-regular-wine.svg'
-import menuIconBlack from '../assets/Icons/bars-regular.svg'
-import userIcon from '../assets/Icons/user-alt-light.svg'
-import AdminIcon from '../assets/Icons/user-crown-light.svg'
-import signOutIcon from '../assets/Icons/sign-out-alt-regular.svg'
+import menuIcon from '../assets/bars-regular-wine.svg'
+import menuIconBlack from '../assets/bars-regular.svg'
+import userIcon from '../assets/user-alt-light.svg'
+import AdminIcon from '../assets/user-crown-light.svg'
+import signOutIcon from '../assets/sign-out-alt-regular.svg'
 
 import firebase from 'firebase/app'
 import "firebase/auth";

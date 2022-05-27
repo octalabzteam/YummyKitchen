@@ -3,8 +3,8 @@
         <div class="flex flex-col relative text-white">
             <div v-show="editPost" class="w-7 z-10 flex space-x-2 absolute top-2 right-10 toggle-edit">            
                 <!-- <img src="../assets/icons/arrow-right-light.svg" alt=""> -->
-                    <img class="cursor-pointer hover:opacity-50" src="../assets/icons/edit-regular.svg" alt="">
-                    <img class="cursor-pointer hover:opacity-50" src="../assets/icons/trash-regular.svg" alt="">
+                    <img class="cursor-pointer hover:opacity-50" src="../assets/edit-regular.svg" alt="">
+                    <img class="cursor-pointer hover:opacity-50" src="../assets/trash-regular.svg" alt="">
             </div>
             <div class="flex relative flex-col w-full h-full item-card space-y-5">
                 <img :src="post.itemPhoto" class="border-8 border-pink-900 object-cover" alt="">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="flex justify-end w-full  z-10 space-x-10 ">
                     <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-                        <div class="flex p-3 pr-14 relative items-center justify-center" >To Table<span class="absolute right-0"><img src="../assets/Icons/tray-plate-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
+                        <div class="flex p-3 pr-14 relative items-center justify-center" >To Table<span class="absolute right-0"><img src="../assets/tray-plate-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
                     </a>
                 </div>
             </div>
