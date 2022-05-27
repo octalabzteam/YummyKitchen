@@ -116,7 +116,7 @@
 <script setup>
   import reservationIcon from '../assets/Icons/line-table-svgrepo-com.svg'
   const props = defineProps({WelcomeInfo: Array});
-  const idcount = 1;
+  let idcount = 1;
 </script>
 
 <style scoped>
