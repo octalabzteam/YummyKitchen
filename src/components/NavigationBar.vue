@@ -17,7 +17,7 @@
                     <router-link class="link" to="#">Login</router-link>
                     <router-link class="link" to="#">Signup</router-link>
                 </div> -->
-                <label for="check">
+                <label for="check" class="scale-75 md:scale-100">
                     <input  @click="toggleMobileNav(), toggleClass()" class="menuIcon menu-icon"  type="checkbox" id="check"/> 
                     <span v-bind:class="[isActiveNav?'gold':'red']"></span>
                     <span v-bind:class="[isActiveNav?'gold':'red']" ></span>
@@ -189,13 +189,13 @@ label span{
     width:60px;
     height: 60px;
     cursor:pointer;
-}
-  label span{
-  border-radius:6px;
-  height:5px;
-  margin: 5px 0;
-  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
+    }
+    label span{
+    border-radius:6px;
+    height:5px;
+    margin: 5px 0;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
 }
 
 span:nth-of-type(1){
@@ -243,7 +243,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   
   transform-origin:bottom;
   width:50%;
-  transform: translate(30px,-11px) rotatez(45deg);
-
+  transform: translate(30px,-13px) rotatez(45deg);
 }
 </style>
