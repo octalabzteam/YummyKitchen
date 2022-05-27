@@ -6,7 +6,7 @@
           <form action="">
             <div class="flex flex-col">
               <div class="md:ml-auto md:mb-6">
-                <div class="text-2xl md:text-3xl">DO YOU WANT TO STAY IN TOUCH?</div>
+                <div class="text-base md:text-3xl">DO YOU WANT TO STAY IN TOUCH?</div>
                 <p class="font-extralight text-xs md:text-sm py-3">
                   Sign up to be the first to receive special news and event updates from YummyKitchen
                 </p>
@@ -159,7 +159,7 @@
       </div>
         
 
-        <div class="text-center flex justify-around p-2 text-sm" style="background-color: #B59F4A;">
+        <div class="text-center hidden md:visible flex justify-around p-2 text-sm" style="background-color: #B59F4A;">
             <div>
             © 2021 Copyright:
             <a class="text-whitehite underline" href="https://octalabz.com/">YummyKitchen</a>

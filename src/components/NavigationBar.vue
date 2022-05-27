@@ -1,6 +1,6 @@
 <template>
     <header class="container z-30">
-        <nav class="flex absolute left-24 top-10 items-center z-20">
+        <nav class="flex absolute left-2 top-5 md:left-24 md:top-10 items-center z-20">
             <!-- <div class="branding ml-5 md:ml-0">
                 <router-link class="header text-3xl font-bold text-amber-800" to="/">YummyKitchen</router-link>
             </div> -->
