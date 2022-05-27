@@ -176,13 +176,27 @@ label {
 }
 
 label span{
-  border-radius:10px;
+  border-radius:8px;
   height:7px;
   margin: 7px 0;
   transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
 }
 
+@media screen and (max-width: 992px) {
+  label {
+    display:flex;
+    flex-direction:column;
+    width:60px;
+    height: 60px;
+    cursor:pointer;
+}
+  label span{
+  border-radius:6px;
+  height:5px;
+  margin: 5px 0;
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+}
 
 span:nth-of-type(1){
   width:50%;
