@@ -15,7 +15,7 @@ const routes = [
     {
         path: '/:catchAll(.*)*',
         name: "PageNotFound",
-        component: PageNotFound,
+        component: PageNotFound ,
         meta: {
             title: 'PageNot Found'
         } 
