@@ -108,11 +108,11 @@
       </div>
       <div class="flex pt-12 z-10 space-x-10 ">
         <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-          <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0"><img src="../assets/line-table-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
+          <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0"><img src="../assets/times-circle-light.svg" alt="" class="h-8 px-2 transition-all"></span></div>
         </a>
 
         <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-        <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 "><img src="../assets/direction-svgrepo-com.svg" alt="" class="h-7 px-2 transition-all"></span></div>
+        <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 "><img src="../assets/table-design.png" alt="" class="h-7 px-2 transition-all"></span></div>
         </a>
       </div>
     </div>
