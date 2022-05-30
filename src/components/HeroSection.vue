@@ -61,6 +61,22 @@
       <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/hotel-corner.png" alt="">
     </div>
 
+    <!--Carousel Home Page -->
+
+    <div class="flex relative flex-col md:flex-row space-y-14 md:space-x-20 items-center justify-center md:space-y-0 py-40 px-10 md:px-2">
+        <img class="absolute w-96 xl:w-auto z-0 left-0 top-0" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/home5.png" alt="">
+        <div class="space-y-3 text-center z-10">
+          <div class="text-3xl md:text-xl lg:text-3xl" style="color:#B59F4A">Best Of Yummy Kitchen</div>
+          <h3 class="max-w-sm leading-loose">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
+        </div>
+
+        <div v-for="item in WelcomeScreen[2]" :key="item" v-bind:id="'dish'+idcount++" class=" hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
+          <a href="#">
+          <img class="max-h-96" v-bind:src=item alt="">
+          </a>
+        </div>
+    </div>
+
   </div>
 </template>
 
