@@ -86,6 +86,8 @@ import menuIconBlack from '../assets/bars-regular.svg'
 import userIcon from '../assets/user-alt-light.svg'
 import AdminIcon from '../assets/user-crown-light.svg'
 import signOutIcon from '../assets/sign-out-alt-regular.svg'
+import reservationIcon from '../assets/line-table-svgrepo-com.svg'
+import timecircle from '../assets/times-circle-light.svg'
 
 import firebase from 'firebase/app'
 import "firebase/auth";
@@ -98,8 +100,9 @@ export default {
         menuIconBlack,
         userIcon,
         AdminIcon,
-        signOutIcon
-
+        signOutIcon,
+        reservationIcon,
+        timecircle
     },
     data() {
         return {

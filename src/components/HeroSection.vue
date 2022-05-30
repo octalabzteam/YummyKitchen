@@ -2,13 +2,14 @@
   <!-- Hero Section -->
   <div>
     <div class="flex relative justify-end bg-black">
-        <img class="absolute w-auto h-36 left-1/4 opacity-70" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/Home1.png" alt="">
-        <div class="flex absolute md:relative flex-col self-center w-full pb-5 backdrop-blur-sm bg-gradient-to-t from-black md:w-1/3 items-center text-center px-3 space-y-5">
+        <img class="absolute z-10 w-auto h-36 left-1/4 opacity-70" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/Home1.png" alt="">
+        <div class="flex absolute md:relative z-20 flex-col self-center w-full pb-5 md:w-1/3 items-center text-center px-3 space-y-5">
           <img v-bind:src="WelcomeScreen[0].logo" class="h-fit w-96" />
-          <div class="font-normal text-base text-slate-300 leading-relaxed px-4">{{WelcomeScreen[0].short_desc}}</div>
+          <div class="font-normal text-base text-slate-200 leading-relaxed px-4">{{WelcomeScreen[0].short_desc}}</div>
         </div>
-        <div class="flex h-screen w-full md:w-2/3 flex-col text-center justify-end hero-background">
-          <div class="flex flex-row justify-end items-center p-12 text-center bg-gradient-to-t from-black" style="color: #B59F4A">
+        <div class="md:hidden w-full h-screen absolute z-10 bg-gradient-to-r from-black to-slate-900 opacity-60"></div>
+        <div class="flex h-screen w-full md:w-2/3 z-0 flex-col text-center justify-end hero-background">
+          <div class="flex flex-row justify-end items-center p-12 text-center" style="color: #B59F4A">
             <div class="pr-4">Via Address Goes Here | Ph: +39 xxxxxxxxxx</div>
                 <a href="#!" type="button" class="border-2 border-amber-500 text-amber-500 leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                   <svg aria-hidden="true"
@@ -50,10 +51,10 @@
 
     <div class="flex h-fit md:h-screen mt-5 relative space-y-8 flex-col md:flex-row justify-center text-center pb-10">
       <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/pngwing.com.png" alt=""> -->
-      <div class="flex z-10 justify-center items-center md:justify-end px-14 w-full h-full md-1/2 pattren">
-        <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit lg:w-2/3 w-4/5 rounded-sm img-shad">
+      <div class="flex z-10 justify-center items-center md:justify-end px-8 md:px-14 w-full h-full md-1/2 pattren">
+        <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit xl:w-2/3 w-full rounded-sm img-shad">
       </div>
-      <div class="flex z-10 flex-col lg:text-left space-y-12 px-14 w-11/12 relative md:pt-36 tracking-wider">
+      <div class="flex z-10 flex-col lg:text-left space-y-12 px-3 md:px-14 w-11/12 relative md:pt-36 tracking-wider">
         <div class="text-3xl" style="color:#B59F4A">{{WelcomeScreen[1].title}}</div>
         <div class="leading-loose">{{WelcomeScreen[1].description}} Has a greate Feature</div>
         <div class="leading-loose xl:w-2/3">{{WelcomeScreen[1].description}}</div>
@@ -108,11 +109,17 @@
       </div>
       <div class="flex pt-12 z-10 space-x-10 ">
         <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-          <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0"><img src="../assets/times-circle-light.svg" alt="" class="h-8 px-2 transition-all"></span></div>
+          <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0">
+            <reslogo class="zoomhover h-8 px-2 transition-all"/>
+            </span>
+          </div>
         </a>
 
         <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-        <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 "><img src="../assets/table-design.png" alt="" class="h-7 px-2 transition-all"></span></div>
+        <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 ">
+            <dirlogo class="zoomhover h-8 px-2 transition-all"/>
+          </span>
+        </div>
         </a>
       </div>
     </div>
@@ -120,8 +127,9 @@
 </template>
 
 <script setup>
-  import reservationIcon from '../assets/line-table-svgrepo-com.svg'
   import { computed } from "@vue/runtime-core"
+  import reslogo from "../assets/line-table-svgrepo-com.svg"
+  import dirlogo from "../assets/direction-svgrepo-com.svg"
   import {inject} from 'vue'
 
   const useStore = inject('useStore')
@@ -164,7 +172,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.reserve-button:hover>div>span>img {
+.reserve-button:hover>div .zoomhover {
   height: 40px;
 }
 </style>

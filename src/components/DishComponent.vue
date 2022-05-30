@@ -1,10 +1,10 @@
 <template>
     <a href="#" class="hover:-translate-y-2 transition-all hover:shadow-xl item-link">
         <div class="flex flex-col relative text-white">
-            <div v-show="editPost" class="w-7 z-10 flex space-x-2 absolute top-2 right-10 toggle-edit">            
+            <div v-show="editPost" class="w-16 z-10 flex space-x-2 absolute top-3 right-3 toggle-edit">            
                 <!-- <img src="../assets/icons/arrow-right-light.svg" alt=""> -->
-                    <img class="cursor-pointer hover:opacity-50" src="../assets/edit-regular.svg" alt="">
-                    <img class="cursor-pointer hover:opacity-50" src="../assets/trash-regular.svg" alt="">
+                    <editlogo class="bg-gray-50 p-1 cursor-pointer hover:text-opacity-60 text-gray-600" />
+                    <trashlogo class="bg-gray-50 p-1 cursor-pointer hover:text-opacity-60 text-red-600" />
             </div>
             <div class="flex relative flex-col w-full h-full item-card space-y-5">
                 <img :src="post.itemPhoto" class="border-8 border-pink-900 object-cover" alt="">
@@ -25,6 +25,8 @@
 <script setup>
 import { computed } from "@vue/runtime-core"
 import {inject} from 'vue'
+import editlogo from "../assets/edit-regular.svg"
+import trashlogo from "../assets/trash-regular.svg"
 
 const props = defineProps({post: Object})
 const useStore = inject('useStore')

@@ -1,5 +1,5 @@
 <template>
-    <div class="toggle-edit absolute right-10 top-10">
+    <div v-show="isAdmin" class="toggle-edit absolute right-10 top-10">
         <span class="mr-2">Toggle Editing post</span>
         <input type="checkbox" v-model="editPost">
     </div>
@@ -25,6 +25,10 @@ const store = useStore();
 
 const AllItems = computed(() => {
     return store.state.user.AllItems;
+})
+
+const isAdmin = computed(() => {
+    return store.state.user.isAdmin;
 })
 
 const editPost = computed({
