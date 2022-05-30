@@ -4,8 +4,8 @@
   <div class="flex relative justify-end bg-black">
       <img class="absolute w-auto h-36 left-1/4 opacity-70" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/Home1.png" alt="">
       <div class="flex absolute md:relative flex-col self-center w-full pb-5 backdrop-blur-sm bg-gradient-to-t from-black md:w-1/3 items-center text-center px-3 space-y-5">
-        <img v-bind:src="WelcomScreen[0].logo" class="h-fit w-96" />
-        <div class="font-normal text-base text-slate-300 leading-relaxed px-4">{{WelcomScreen[0].short_desc}}</div>
+        <img v-bind:src="WelcomeScreen[0].logo" class="h-fit w-96" />
+        <div class="font-normal text-base text-slate-300 leading-relaxed px-4">{{WelcomeScreen[0].short_desc}}</div>
       </div>
       <div class="flex h-screen w-full md:w-2/3 flex-col text-center justify-end hero-background">
         <div class="flex flex-row justify-end items-center p-12 text-center bg-gradient-to-t from-black" style="color: #B59F4A">
@@ -51,12 +51,12 @@
   <div class="flex h-fit md:h-screen mt-5 relative space-y-8 flex-col md:flex-row justify-center text-center pb-10">
     <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/pngwing.com.png" alt=""> -->
     <div class="flex z-10 justify-center items-center md:justify-end px-14 w-full h-full md-1/2 pattren">
-      <img v-bind:src="WelcomScreen[1].photo" alt="" class="h-fit lg:w-2/3 w-4/5 rounded-sm img-shad">
+      <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit lg:w-2/3 w-4/5 rounded-sm img-shad">
     </div>
     <div class="flex z-10 flex-col lg:text-left space-y-12 px-14 w-11/12 relative md:pt-36 tracking-wider">
-      <div class="text-3xl" style="color:#B59F4A">{{WelcomScreen[1].title}}</div>
-      <div class="leading-loose">{{WelcomScreen[1].description}} Has a greate Feature</div>
-      <div class="leading-loose xl:w-2/3">{{WelcomScreen[1].description}}</div>
+      <div class="text-3xl" style="color:#B59F4A">{{WelcomeScreen[1].title}}</div>
+      <div class="leading-loose">{{WelcomeScreen[1].description}} Has a greate Feature</div>
+      <div class="leading-loose xl:w-2/3">{{WelcomeScreen[1].description}}</div>
     </div>
     <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/hotel-corner.png" alt="">
   </div>
@@ -70,7 +70,7 @@
         <h3 class="max-w-sm leading-loose">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
       </div>
 
-      <div v-for="item in WelcomScreen[2]" :key="item" v-bind:id="'dish'+idcount++" class=" hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
+      <div v-for="item in WelcomeScreen[2]" :key="item" v-bind:id="'dish'+idcount++" class=" hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
         <a href="#">
         <img class="max-h-96" v-bind:src=item alt="">
         </a>
@@ -115,27 +115,17 @@
 
 <script setup>
   import reservationIcon from '../assets/line-table-svgrepo-com.svg'
-  const props = defineProps({WelcomeInfo: Array});
-  let idcount = 1;
+  import { computed } from "@vue/runtime-core"
+  import {inject} from 'vue'
 
-    const WelcomScreen = [
-    {
-      title: "Yummy Kitchen",
-      short_desc: "Ritu Dalmia and Viviana Varese, an Indian and an Italian heart, invite you on a journey through their love for travel, discovery, and sharing their experiences along the way.",
-      status: true,
-      photo: "https://avada.theme-fusion.com/restaurant/wp-content/uploads/sites/112/2021/04/hero-mobile.jpg",
-      logo: "https://yummy-kitchen.de/wp-content/uploads/2020/07/logo-restaurant@1x.png"
-    },
-    {
-        title: "Our Wall of Best",
-        description: "Ritu Dalmia and Viviana Varese, an Indian and an Italian heart, invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.",
-        photo: "https://i0.wp.com/www.spicarestaurant.com/spica-uploads/2019/06/Spica-insalata-Som-tam-Thailandia-1-e1573739431995-800x800.jpg"
-    },
-    {
-      homeMenu1: "https://i0.wp.com/www.spicarestaurant.com/spica-uploads/2019/11/IMG-0218-540x540.jpg",
-      homeMenu2: "https://i0.wp.com/www.spicarestaurant.com/spica-uploads/2019/11/MG_6415-e1573739251360-540x540.jpg",
-    }
-        ]
+  const useStore = inject('useStore')
+  const store = useStore();
+  let idcount = 1;
+  
+  const WelcomeScreen = computed(()=>{
+    return store.state.user.WelcomScreen;
+  })
+
 
 </script>
 

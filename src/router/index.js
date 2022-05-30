@@ -1,6 +1,7 @@
 import {createWebHistory, createRouter} from 'vue-router';
 import HomeComponent from '../views/HomeComponent.vue'
 import HelloWorld from '../components/HelloWorld.vue'
+import PageNotFound from '../components/PageNotFound.vue'
 import DishView from '../views/DishView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
@@ -13,7 +14,15 @@ import CreatePost from '../views/CreatePost.vue'
 const routes = [
     {
         path: '/:catchAll(.*)*',
-        name: "Home",
+        name: "PageNotFound",
+        component: PageNotFound,
+        meta: {
+            title: 'PageNot Found'
+        } 
+    },
+    {
+        path: '/',
+        name: 'Home',
         component: HomeComponent,
         meta: {
             title: 'Home'

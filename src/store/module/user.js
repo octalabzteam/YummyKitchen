@@ -64,6 +64,24 @@ export default {
             category: "1" 
             },
           ],
+        WelcomScreen: [
+        {
+            title: "Yummy Kitchen",
+            short_desc: "Ritu Dalmia and Viviana Varese, an Indian and an Italian heart, invite you on a journey through their love for travel, discovery, and sharing their experiences along the way.",
+            status: true,
+            photo: "https://avada.theme-fusion.com/restaurant/wp-content/uploads/sites/112/2021/04/hero-mobile.jpg",
+            logo: "https://yummy-kitchen.de/wp-content/uploads/2020/07/logo-restaurant@1x.png"
+        },
+        {
+            title: "Our Wall of Best",
+            description: "Ritu Dalmia and Viviana Varese, an Indian and an Italian heart, invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.",
+            photo: "https://i0.wp.com/www.spicarestaurant.com/spica-uploads/2019/06/Spica-insalata-Som-tam-Thailandia-1-e1573739431995-800x800.jpg"
+        },
+        {
+            homeMenu1: "https://i0.wp.com/www.spicarestaurant.com/spica-uploads/2019/11/IMG-0218-540x540.jpg",
+            homeMenu2: "https://i0.wp.com/www.spicarestaurant.com/spica-uploads/2019/11/MG_6415-e1573739251360-540x540.jpg",
+        }
+          ],
         blogHtml: "Write your blog title here ...",
         blogTitle: "",
         blogPhotoName: "",

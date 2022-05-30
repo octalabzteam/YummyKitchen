@@ -26,7 +26,7 @@
 import { computed } from "@vue/runtime-core"
 import {inject} from 'vue'
 
-const props = defineProps({post: Array})
+const props = defineProps({post: Object})
 const useStore = inject('useStore')
 const store = useStore();
 
