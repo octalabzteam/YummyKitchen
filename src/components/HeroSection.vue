@@ -61,22 +61,40 @@
       <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/hotel-corner.png" alt="">
     </div>
 
-    <!--Carousel Home Page -->
-
-    <div class="flex relative flex-col md:flex-row space-y-14 md:space-x-20 items-center justify-center md:space-y-0 py-40 px-10 md:px-2">
-        <img class="absolute w-96 xl:w-auto z-0 left-0 top-0" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/home5.png" alt="">
-        <div class="space-y-3 text-center z-10">
-          <div class="text-3xl md:text-xl lg:text-3xl" style="color:#B59F4A">Best Of Yummy Kitchen</div>
-          <h3 class="max-w-sm leading-loose">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
+    <!--Down Hero Section -->
+    <div class="flex relative h-96 secondary-hero text-white"> 
+      <div class="absolute self-center left-0 right-0 m-auto">
+        <div class="flex flex-col text-center tracking-normal space-y-5 w-full h-full">
+          <h1 class="top-1/2 items-center text-4xl font-bold">Discover Our Restourant</h1>
+          <div class="text-xl">A space that relates to the culmination of the love for travel, discovery, and shared experiences.</div>
         </div>
+      </div>
 
-        <div v-for="item in WelcomeScreen[2]" :key="item" v-bind:id="'dish'+idcount++" class=" hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
-          <a href="#">
-          <img class="max-h-96" v-bind:src=item alt="">
-          </a>
-        </div>
     </div>
 
+    <!--Opening Hours Section -->
+    <div class="flex relative flex-col items-center pt-28 text-center space-y-8 h-screen w-full pb-20 lg:pb-0">
+      <img class="absolute bottom-20 lg:bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/out-resturant.png" alt="">
+      <div class="text-3xl font-semibold" style="color: #B59F4A">Restaurant Hours</div>
+      <div class="space-y-3 text-xl">
+        <h1><span class="font-semibold">Monday   </span>5:30 pm – 12 pm</h1>
+        <h1><span class="font-semibold">Tuesday </span>5:30 pm – 12 pm</h1>
+        <h1><span class="font-semibold">Wednesday </span>5:30 pm – 12 pm</h1>
+        <h1><span class="font-semibold">Thursday </span>5:30 pm – 12 pm</h1>
+        <h1><span class="font-semibold">Friday </span>5:30 pm – 12 pm</h1>
+        <h1><span class="font-semibold">Saturday </span>5:30 pm – 12 pm</h1>
+        <h1><span class="font-semibold">Sunday </span>5:30 pm – 12 pm</h1>
+      </div>
+      <div class="flex pt-12 z-10 space-x-10 ">
+        <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
+          <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0"><img src="../assets/line-table-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
+        </a>
+
+        <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
+        <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 "><img src="../assets/direction-svgrepo-com.svg" alt="" class="h-7 px-2 transition-all"></span></div>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
