@@ -70,9 +70,14 @@
           <h3 class="max-w-sm leading-loose">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
         </div>
 
-        <div v-for="item in WelcomeScreen[2]" :key="item" v-bind:id="idcount++" class=" hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
+        <div class="dish1 hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
           <a href="#">
-          <img class="max-h-96" v-bind:src=item alt="">
+          <img class="max-h-96" v-bind:src=WelcomeScreen[2].homeMenu1 alt="">
+          </a>
+        </div>
+        <div class="dish2 hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
+          <a href="#">
+          <img class="max-h-96" v-bind:src=WelcomeScreen[2].homeMenu2 alt="">
           </a>
         </div>
     </div>
@@ -141,15 +146,15 @@
 .pattren {
   background-image: url("data:image/svg+xml,%3Csvg width='52' height='54' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-#2 {
+.dish2 {
   border-radius: 0px 0px 100% 0px;
   overflow: hidden;
 }
-#1 {
+.dish1 {
   border-radius: 100% 0px 0px 0px;
   overflow: hidden;
 }
-#1:hover, #2:hover {
+.dish1:hover, .dish2:hover {
   border-radius: 0;
 }
 .secondary-hero {
