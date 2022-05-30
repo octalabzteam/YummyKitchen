@@ -46,6 +46,21 @@
       </div>
     </div>
 
+    <!-- Main Dish Section -->
+
+    <div class="flex h-fit md:h-screen mt-5 relative space-y-8 flex-col md:flex-row justify-center text-center pb-10">
+      <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/pngwing.com.png" alt=""> -->
+      <div class="flex z-10 justify-center items-center md:justify-end px-14 w-full h-full md-1/2 pattren">
+        <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit lg:w-2/3 w-4/5 rounded-sm img-shad">
+      </div>
+      <div class="flex z-10 flex-col lg:text-left space-y-12 px-14 w-11/12 relative md:pt-36 tracking-wider">
+        <div class="text-3xl" style="color:#B59F4A">{{WelcomeScreen[1].title}}</div>
+        <div class="leading-loose">{{WelcomeScreen[1].description}} Has a greate Feature</div>
+        <div class="leading-loose xl:w-2/3">{{WelcomeScreen[1].description}}</div>
+      </div>
+      <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/hotel-corner.png" alt="">
+    </div>
+
   </div>
 </template>
 
