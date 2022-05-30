@@ -3,8 +3,8 @@
         <div class="flex flex-col relative text-white">
             <div v-show="editPost" class="w-16 z-10 flex space-x-2 absolute top-3 right-3 toggle-edit">            
                 <!-- <img src="../assets/icons/arrow-right-light.svg" alt=""> -->
-                    <editlogo class="bg-gray-50 p-1 cursor-pointer hover:text-opacity-60 text-gray-600" />
-                    <trashlogo class="bg-gray-50 p-1 cursor-pointer hover:text-opacity-60 text-red-600" />
+                    <editlogo class="bg-gray-50 p-1 cursor-pointer hover:bg-slate-900 hover:text-white text-gray-600" />
+                    <trashlogo class="bg-gray-50 p-1 cursor-pointer hover:bg-red-600 hover:text-white text-red-600" />
             </div>
             <div class="flex relative flex-col w-full h-full item-card space-y-5">
                 <img :src="post.itemPhoto" class="border-8 border-pink-900 object-cover" alt="">
@@ -14,7 +14,10 @@
                 </div>
                 <div class="flex justify-end w-full  z-10 space-x-10 ">
                     <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
-                        <div class="flex p-3 pr-14 relative items-center justify-center" >To Table<span class="absolute right-0"><img src="../assets/tray-plate-svgrepo-com.svg" alt="" class="h-8 px-2 transition-all"></span></div>
+                        <div class="flex p-3 pr-14 relative items-center justify-center" >To Table<span class="absolute right-0">
+                            <tablelogo class="h-8 px-2 transition-all" />
+                            </span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -27,6 +30,7 @@ import { computed } from "@vue/runtime-core"
 import {inject} from 'vue'
 import editlogo from "../assets/edit-regular.svg"
 import trashlogo from "../assets/trash-regular.svg"
+import tablelogo from "../assets/tray-plate-svgrepo-com.svg"
 
 const props = defineProps({post: Object})
 const useStore = inject('useStore')
