@@ -1,7 +1,7 @@
 <template>
   <section class="h-screen loginscreen">
     <div class="container px-6 py-12 h-full">
-      <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+      <div class="flex md:space-x-24 justify-center items-center h-full g-6 text-gray-800">
 
         <div class="md:w-8/12 lg:w-1/3 xl:w-1/5 lg:ml-20 w-4/5">
           <form>

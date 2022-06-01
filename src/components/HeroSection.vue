@@ -52,7 +52,7 @@
     <div class="flex h-fit md:h-screen mt-5 relative space-y-8 flex-col md:flex-row justify-center text-center pb-10">
       <!-- <img class="absolute opacity-10 right-1 top-1/2 md:top-0" src="../assets/pngwing.com.png" alt=""> -->
       <div class="flex z-10 justify-center items-center md:justify-end px-8 md:px-14 w-full h-full md-1/2 pattren">
-        <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit xl:w-2/3 w-full rounded-sm img-shad">
+        <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit xl:w-3/4 md:w-full w-4/5 rounded-sm img-shad">
       </div>
       <div class="flex z-10 flex-col lg:text-left space-y-12 px-3 md:px-14 w-11/12 relative md:pt-36 tracking-wider">
         <div class="text-3xl" style="color:#B59F4A">{{WelcomeScreen[1].title}}</div>
@@ -108,12 +108,12 @@
         <h1><span class="font-semibold">Sunday </span>5:30 pm – 12 pm</h1>
       </div>
       <div class="flex pt-12 z-10 space-x-10 ">
-        <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
+        <router-link :to="{name: 'ReservationView'}" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
           <div class="flex p-3 pr-14 relative items-center justify-center" >RESERVATION <span class="absolute right-0">
             <reslogo class="zoomhover h-8 px-2 transition-all"/>
             </span>
           </div>
-        </a>
+        </router-link>
 
         <a href="#" class="border-2 reserve-button hover:shadow-xl hover:-translate-y-2 transition-all" style="border-color:#B59F4A">
         <div class="relative flex p-3 pr-14 items-center justify-center" style="border-color:#B59F4A">DIRECTION<span class="absolute right-0 ">
@@ -152,7 +152,7 @@
    box-shadow: -50px 50px 2px #a52a2a11;
 }
 .pattren {
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='54' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='54' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 .dish2 {
   border-radius: 0px 0px 100% 0px;

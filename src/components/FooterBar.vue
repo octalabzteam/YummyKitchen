@@ -159,14 +159,14 @@
       </div>
         
 
-        <div class="text-center hidden md:visible flex justify-around p-2 text-sm" style="background-color: #B59F4A;">
+        <div class="text-center flex flex-col md:flex-row space-y-2 justify-around p-2 text-sm" style="background-color: #B59F4A;">
             <div>
             © 2021 Copyright:
             <a class="text-whitehite underline" href="https://octalabz.com/">YummyKitchen</a>
             </div>
 
             <div class="text-xs">
-              <a href="#" class="underline">PRIVACY POLICY</a> | SHOW COOKIE BANNER | HANDCRAFTED BY <a href="#" class="underline">OCTALABZ IT SOLUTION</a>| GE
+              <a href="#" class="">PRIVACY POLICY</a> | SHOW COOKIE BANNER | HANDCRAFTED BY <a href="#" class="underline font-bold">OCTALABZ IT SOLUTION</a>| GE
             </div>
         </div>
     </footer>
