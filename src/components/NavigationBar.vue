@@ -31,7 +31,7 @@
         <transition name="mobile-nav" class="shadow-lg justify-center text-center" v-on:scroll.passive=toggleMobileNav()>
                 <ul class="flex flex-col space-y-7 text-3xl font-semibold p-5 w-3/4 max-w-2xl fixed h-full top-0 left-0" v-show="mobileNav" style="background-color: #B59F4A;">
                     <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'Home'}">Home</router-link>
-                    <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" to="#">Reservation</router-link>
+                    <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'ReservationView'}">Reservation</router-link>
                     <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'DishView'}">Menu</router-link>
                     <router-link v-if="admin" @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'CreatePost'}">Add Item</router-link>
                     <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" to="#">ContactUs</router-link>

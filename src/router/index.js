@@ -9,6 +9,7 @@ import ForgotPassword from '../views/ForgotPassword.vue'
 import ProfileView from '../views/ProfileView.vue'
 import AdminView from '../views/AdminView.vue'
 import CreatePost from '../views/CreatePost.vue'
+import ReservationView from '../views/ReservationView.vue'
 
 
 const routes = [
@@ -82,6 +83,14 @@ const routes = [
         component: CreatePost,
         meta: {
             title: 'Admin'
+        } 
+    },
+    {
+        path: '/reservation',
+        name: 'ReservationView',
+        component: ReservationView,
+        meta: {
+            title: 'Reserve'
         } 
     },
     {

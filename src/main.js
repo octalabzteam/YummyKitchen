@@ -5,6 +5,7 @@ import store from './store'
 import { VueEditor } from 'vue2-editor';
 
 import './index.css';
+import 'v-calendar/dist/style.css';
 
 //handeling state change for authentication
 import firebase from 'firebase/app'
