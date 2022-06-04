@@ -24,7 +24,7 @@
             class="pt-4"
             />
         </div>
-        <button @click="tet" class="bg-yellow-600 w-36 p-2 px-5 text-white absolute right-10 md:right-40 lg:right-1/4 bottom-60">Cofirm</button>
+        <button @click="tet" class="bg-yellow-600 w-36 p-2 px-5 text-white ">Cofirm</button>
         <div v-if="varerror" class="text-red-500">Please fill all details</div>
     </div>
     <!-- <img src="../assets/starter.png" class="h-1/5 lg:h-1/4 xl:h-1/3 2xl:h-1/2 bottom-0 absolute right-0 "> -->

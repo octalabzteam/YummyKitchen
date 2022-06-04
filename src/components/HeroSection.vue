@@ -5,7 +5,7 @@
         <img class="absolute z-10 w-auto h-36 left-1/4 opacity-70" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/Home1.png" alt="">
         <div class="flex absolute md:relative z-20 flex-col self-center w-full pb-5 md:w-1/3 items-center text-center px-3 space-y-5">
           <img v-bind:src="WelcomeScreen[0].logo" class="h-fit w-96" />
-          <div class="font-normal text-base text-slate-200 leading-relaxed px-4">{{WelcomeScreen[0].short_desc}}</div>
+          <div class="font-normal text-lg text-slate-200 leading-relaxed px-4">{{WelcomeScreen[0].short_desc}}</div>
         </div>
         <div class="md:hidden w-full h-screen absolute z-10 bg-gradient-to-r from-black to-slate-900 opacity-60"></div>
         <div class="flex h-screen w-full md:w-2/3 z-0 flex-col text-center justify-end hero-background">
@@ -55,9 +55,9 @@
         <img v-bind:src="WelcomeScreen[1].photo" alt="" class="h-fit xl:w-3/4 md:w-full w-4/5 rounded-sm img-shad">
       </div>
       <div class="flex z-10 flex-col lg:text-left space-y-12 px-3 md:px-14 w-11/12 relative md:pt-36 tracking-wider">
-        <div class="text-3xl" style="color:#B59F4A">{{WelcomeScreen[1].title}}</div>
-        <div class="leading-loose">{{WelcomeScreen[1].description}} Has a greate Feature</div>
-        <div class="leading-loose xl:w-2/3">{{WelcomeScreen[1].description}}</div>
+        <div class="text-3xl font-semibold" style="color:#B59F4A">{{WelcomeScreen[1].title}}</div>
+        <div class="leading-loose text-lg">{{WelcomeScreen[1].description}} Has a greate Feature</div>
+        <div class="leading-loose text-lg xl:w-2/3">{{WelcomeScreen[1].description}}</div>
       </div>
       <img class="absolute bottom-0 right-0 opacity-10 2xl:opacity-100 scale-75" src="../assets/hotel-corner.png" alt="">
     </div>
@@ -67,8 +67,8 @@
     <div class="flex relative flex-col md:flex-row space-y-14 md:space-x-20 items-center justify-center md:space-y-0 py-40 px-10 md:px-2">
         <img class="absolute w-96 xl:w-auto z-0 left-0 top-0" src="https://i0.wp.com/www.spicarestaurant.com/wp-content/themes/spica-theme/images/home5.png" alt="">
         <div class="space-y-3 text-center z-10">
-          <div class="text-3xl md:text-xl lg:text-3xl" style="color:#B59F4A">Best Of Yummy Kitchen</div>
-          <h3 class="max-w-sm leading-loose">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
+          <div class="text-3xl md:text-xl lg:text-3xl font-semibold" style="color:#B59F4A">Best Of Yummy Kitchen</div>
+          <h3 class="max-w-sm leading-loose text-lg">invite you on a journey through their love for travel, discovery, and sharing their experiences along the way. through their love for travel, discovery, and sharing their experiences along the way.</h3>
         </div>
 
         <div class="dish1 hover:shadow-pink-800  transition-all ease-in-out duration-150 shadow-[0_10px_0px_-5px] shadow-pink-600">
@@ -96,7 +96,7 @@
 
     <!--Opening Hours Section -->
     <div class="flex relative flex-col items-center pt-28 text-center space-y-8 h-screen w-full pb-20 lg:pb-0">
-      <img class="absolute bottom-20 lg:bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/out-resturant.png" alt="">
+      <img class="absolute bottom-0 right-14 md:right-0 h-64  md:h-80 lg:h-96 2xl:h-auto" src="../assets/out-resturant.png" alt="">
       <div class="text-3xl font-semibold" style="color: #B59F4A">Restaurant Hours</div>
       <div class="space-y-3 text-xl">
         <h1><span class="font-semibold">Monday   </span>5:30 pm – 12 pm</h1>

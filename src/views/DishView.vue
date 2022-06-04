@@ -7,7 +7,7 @@
         </label>
     </div>
     <div class="flex flex-col items-center text-center p-5 space-y-8">
-        <img src="../assets/menu-icon.png" class="h-56" alt="">
+        <img src="../assets/menu-icon.png" class="h-36" alt="">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-16 w-4/5 2xl:w-3/4">
             <DishComponent 
             :post="post" 

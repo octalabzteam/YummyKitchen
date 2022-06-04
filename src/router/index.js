@@ -2,6 +2,7 @@ import {createWebHistory, createRouter} from 'vue-router';
 import HomeComponent from '../views/HomeComponent.vue'
 import HelloWorld from '../components/HelloWorld.vue'
 import PageNotFound from '../components/PageNotFound.vue'
+// import FilterDish from '../components/FilterDish.vue'
 import DishView from '../views/DishView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
@@ -10,6 +11,7 @@ import ProfileView from '../views/ProfileView.vue'
 import AdminView from '../views/AdminView.vue'
 import CreatePost from '../views/CreatePost.vue'
 import ReservationView from '../views/ReservationView.vue'
+
 
 
 const routes = [

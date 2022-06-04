@@ -33,12 +33,12 @@ onMounted(() => {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
 
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Merienda', cursive;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .app {

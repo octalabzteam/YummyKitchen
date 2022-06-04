@@ -18,7 +18,7 @@
                     <router-link class="link" to="#">Signup</router-link>
                 </div> -->
                 <label for="check" class="scale-75 md:scale-100">
-                    <input  @click="toggleMobileNav(), toggleClass()" class="menuIcon menu-icon"  type="checkbox" id="check"/> 
+                    <input  @click="toggleMobileNav(), toggleClass()" class="menuIcon"  type="checkbox" id="check"/> 
                     <span v-bind:class="[isActiveNav?'gold':'red']"></span>
                     <span v-bind:class="[isActiveNav?'gold':'red']" ></span>
                     <span v-bind:class="[isActiveNav?'gold':'red']" ></span>
@@ -29,12 +29,14 @@
         </nav>
         
         <transition name="mobile-nav" class="shadow-lg justify-center text-center" v-on:scroll.passive=toggleMobileNav()>
-                <ul class="flex flex-col space-y-7 text-3xl font-semibold p-5 w-3/4 max-w-2xl fixed h-full top-0 left-0" v-show="mobileNav" style="background-color: #B59F4A;">
+                <ul class="flex flex-col space-y-7 text-2xl md:text-3xl font-semibold p-5 w-3/4 max-w-2xl fixed h-full top-0 left-0" v-show="mobileNav" style="background-color: #B59F4A;">
+                    <img src="https://yummy-kitchen.de/wp-content/uploads/2020/07/logo-restaurant@1x.png" class="w-52 self-center">
                     <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'Home'}">Home</router-link>
                     <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'ReservationView'}">Reservation</router-link>
                     <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'DishView'}">Menu</router-link>
+                    <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" to="#">ContactUs</router-link><hr class="w-64 self-center">
+                    <!-- <AdminIcon v-if="admin" class="h-4 text-pink-800 py-0" /> -->
                     <router-link v-if="admin" @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" :to="{name: 'CreatePost'}">Add Item</router-link>
-                    <router-link @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link" to="#">ContactUs</router-link>
                     <router-link v-if="!user" @click="toggleMenuBar(),toggleClass(), toggleMobileNav()" class="link font-normal text-base border-2 w-fit p-3 rounded-md border-white self-center" :to="{name: 'LoginView'}">Login / Register</router-link>
                     
                     <div v-if="user" @click="toggleProfileMenu" class="flex w-full justify-center">
@@ -183,22 +185,6 @@ label span{
   height:7px;
   margin: 7px 0;
   transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-
-@media screen and (max-width: 992px) {
-  label {
-    display:flex;
-    flex-direction:column;
-    width:60px;
-    height: 60px;
-    cursor:pointer;
-    }
-    label span{
-    border-radius:6px;
-    height:5px;
-    margin: 5px 0;
-    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-    }
 }
 
 span:nth-of-type(1){
