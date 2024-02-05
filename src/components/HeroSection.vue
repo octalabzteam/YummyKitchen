@@ -145,7 +145,7 @@
 
 <style scoped>
 .hero-background {
-  background: no-repeat center url(https://as2.ftcdn.net/v2/jpg/05/60/51/21/1000_F_560512106_IKHpxV2ZVsBEDokIRxoCcaesyt1jC9J5.jpg);
+  background: no-repeat center url(https://images.unsplash.com/photo-1484659619207-9165d119dafe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: cover;
 }
  .img-shad {
