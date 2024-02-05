@@ -5,9 +5,23 @@ import store from './store'
 import { VueEditor } from 'vue2-editor';
 
 import './index.css';
+import 'v-calendar/dist/style.css';
 
-createApp(App)
-    .use(router)
-    .use(VueEditor)
-    .use(store)
-    .mount('#app')
+//handeling state change for authentication
+import firebase from 'firebase/app'
+import "firebase/auth";
+
+let app;
+firebase.auth().onAuthStateChanged(()=>{
+    if (!app) {
+        createApp(App)
+        .use(router)
+        .use(VueEditor)
+        .use(store)
+        .mount('#app')
+    }
+});
+
+
+
+
