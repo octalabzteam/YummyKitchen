@@ -145,7 +145,7 @@
 
 <style scoped>
 .hero-background {
-  background: no-repeat center url(https://avada.theme-fusion.com/restaurant/wp-content/uploads/sites/112/2021/04/hero-mobile.jpg);
+  background: no-repeat center url(https://as2.ftcdn.net/v2/jpg/05/60/51/21/1000_F_560512106_IKHpxV2ZVsBEDokIRxoCcaesyt1jC9J5.jpg);
   background-size: cover;
 }
  .img-shad {
